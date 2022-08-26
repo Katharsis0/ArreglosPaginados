@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdio>
 using namespace std;
-
+//QUICK SORT
 //Funcion auxiliar que intercambia dos elementos
 void swap(int* numA, int* numB){
     
@@ -27,7 +27,16 @@ int partition(int arr[], int low, int high){
     return (i+1);
 }
 
+//Funcion para mostrar el arreglo
+void showArray(int arr[], int size){
+    for(int i=0; i<size;i++){
+        cout<<arr[i]<<" ";
+    cout<<endl;
 
+    }
+}
+
+//QuickSort
 //low es el indice inicial y high es el indice final    
 void quickSort(int arr[],int low,int high){
     if (low<high){
@@ -39,12 +48,21 @@ void quickSort(int arr[],int low,int high){
 
     }
 }
-
-//Funcion para mostrar el arreglo
-void showArray(int arr[], int size){
-    for(int i=0; i<size;i++){
-        cout<<arr[i]<<" ";
-    cout<<endl;
-
-    }
+//InsertionSort
+void insertionSort(int arr[], int size) 
+{ 
+    int flag, j; 
+    for (int i = 1; i < size; i++)
+    { 
+        flag = arr[i]; 
+        j = i - 1; 
+  
+        //Mueve los elementos del array que son mayores a flag un espacio mas de la position actual
+        while (j >= 0 && arr[j] > flag)
+        { 
+            arr[j + 1] = arr[j]; 
+            j = j - 1; 
+        } 
+        arr[j + 1] = flag; 
+    } 
 }
