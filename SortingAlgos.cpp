@@ -2,6 +2,7 @@
 #include <cstdio>
 using namespace std;
 //QUICK SORT
+
 //Funcion auxiliar que intercambia dos elementos
 void swap(int* numA, int* numB){
     
@@ -65,4 +66,19 @@ void insertionSort(int arr[], int size)
         } 
         arr[j + 1] = flag; 
     } 
+}
+//SelectionSort
+void selectionSort(int arr[], int size){
+    int minVal,i,j;
+
+    for(i=0;i<(size-1);i++){
+        //Encontrar el minimo elemento en el arreglo
+        minVal=i;
+        for(j=i+1;j<size;j++)
+        if(arr[j]<arr[minVal])
+            minVal=j;
+          
+        if(minVal!=i)
+            swap(&arr[i],&arr[minVal]);       
+    }
 }
