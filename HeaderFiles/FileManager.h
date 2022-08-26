@@ -1,6 +1,10 @@
-#include <string>
+#pragma once
 
-bool fileExists(char* fileName);
+#include <string>
+#include <stdio.h>
+#include <iostream>
+#include <fstream>
+using namespace std;
 
 class FileManager{
     public:

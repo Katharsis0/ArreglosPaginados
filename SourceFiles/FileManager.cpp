@@ -1,9 +1,4 @@
-#include "FileManager.h"
-#include <stdio.h>
-#include <iostream>
-#include <fstream>
-
-using namespace std;
+#include "../HeaderFiles/FileManager.h"
 
 //Chequea si el archivo existe
 bool fileExists(const char* fileName){

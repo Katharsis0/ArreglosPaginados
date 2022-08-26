@@ -1,6 +1,12 @@
 #pragma once
+
 #include <stdio.h>
-#include <string> 
+#include <cmath>
+#include <queue>
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <string>
 
 class PagedArray{
     public:
