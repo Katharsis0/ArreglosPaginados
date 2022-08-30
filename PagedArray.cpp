@@ -1,6 +1,6 @@
 
-#include "../HeaderFiles/PagedArray.h"
-#include "../HeaderFiles/FileManager.h"
+#include "PagedArray.h"
+#include "FileManager.h"
 
 
 //Variables
@@ -59,6 +59,9 @@ int PagedArray::replacePage(){
     }
     FileManager::writeNumbers(file, pageCtrPtr[replaced],loadedPages[replaced]);
     delete(pageCtrPtr[replaced]);
+    loadedPages[replaced]=-1;
+    
+    return replaced;
 }
 
 

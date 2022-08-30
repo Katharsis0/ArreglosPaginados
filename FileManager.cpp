@@ -1,4 +1,9 @@
-#include "../HeaderFiles/FileManager.h"
+#include "FileManager.h"
+
+#include <iostream>
+#include <fstream>
+
+using namespace std;
 
 //Chequea si el archivo existe
 bool fileExists(const char* fileName){
@@ -13,7 +18,7 @@ std::FILE* FileManager::openFile(string fileName, string fopenMode){
     std:FILE* filePtr;
 
     if (!fileExists(fileName.c_str()) || (filePtr=std::fopen(fileName.c_str(), fopenMode.c_str()))==NULL){
-        cout<<"Couldn't open selected file: " + fileName<< endl;
+        cout <<"Couldn't open selected file: " + fileName << endl;
         exit(EXIT_FAILURE);
     };
     return filePtr;
@@ -21,8 +26,8 @@ std::FILE* FileManager::openFile(string fileName, string fopenMode){
 
 //Genera un archivo temporal en binario
 std::FILE* FileManager::makeTempFile(){
-    std::FILE* tempFile= std::tmpfile();
-    return tempFile;
+    std::FILE* tmpFile= std::tmpfile();
+    return tmpFile;
 }
 
 //Traduce una lista de enteros separados por coma en un archivo de texto a binario

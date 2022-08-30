@@ -1,6 +1,6 @@
 
-#include "../HeaderFiles/SortingAlgos.h"
-#include "../HeaderFiles/PagedArray.h"
+#include "SortingAlgos.h"
+#include "PagedArray.h"
 //QUICK SORT
 
 //Funcion auxiliar que intercambia dos elementos
