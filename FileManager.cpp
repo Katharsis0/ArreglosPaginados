@@ -1,4 +1,4 @@
-#include "../HeaderFiles/FileManager.h"
+#include "FileManager.h"
 
 //Chequea si el archivo existe
 bool fileExists(const char* fileName){

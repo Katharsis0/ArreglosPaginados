@@ -1,6 +1,6 @@
 
-#include "../HeaderFiles/PagedArray.h"
-#include "../HeaderFiles/FileManager.h"
+#include "PagedArray.h"
+#include "FileManager.h"
 
 
 //Variables
@@ -59,6 +59,10 @@ int PagedArray::replacePage(){
     }
     FileManager::writeNumbers(file, pageCtrPtr[replaced],loadedPages[replaced]);
     delete(pageCtrPtr[replaced]);
+    loadedPages[replaced]=-1;
+
+    
+    return replaced;
 }
 
 
@@ -87,7 +91,7 @@ int* PagedArray::loadPage(int pos, int element){
 }
 
 //Finaliza y crea el archivo final
-void wrapUp(std::string fileName){
+void PagedArray::wrapUp(std::string fileName){
     for(int i=0; i<PGQTY;i++){
         if (loadedPages[i]!=-1){
             FileManager::writeNumbers(file, pageCtrPtr[i], loadedPages[i]);

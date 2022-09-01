@@ -1,6 +1,6 @@
 
-#include "../HeaderFiles/SortingAlgos.h"
-#include "../HeaderFiles/PagedArray.h"
+#include "SortingAlgos.h"
+#include "PagedArray.h"
 //QUICK SORT
 
 //Funcion auxiliar que intercambia dos elementos
@@ -39,7 +39,7 @@ int partition(PagedArray* pagedArray, int low, int high){
 
 //QuickSort
 //low es el indice inicial y high es el indice final    
-void quickSort(PagedArray* pagedArray,int low,int high){
+void SortingAlgos::quickSort(PagedArray* pagedArray,int low,int high){
     if (low<high){
 
         int pivot= partition(pagedArray, low, high);
@@ -50,7 +50,7 @@ void quickSort(PagedArray* pagedArray,int low,int high){
     }
 }
 //InsertionSort
-void insertionSort(PagedArray* pagedArray, int size) 
+void SortingAlgos::insertionSort(PagedArray* pagedArray, int size) 
 { 
     int flag, j; 
     for (int i = 1; i < size; i++)
@@ -68,7 +68,7 @@ void insertionSort(PagedArray* pagedArray, int size)
     } 
 }
 //SelectionSort
-void selectionSort(PagedArray* pagedArray, int size){
+void SortingAlgos::selectionSort(PagedArray* pagedArray, int size){
     int minVal,i,j;
 
     for(i=0;i<(size-1);i++){

@@ -1,8 +1,8 @@
 //Tarea extraclase Sebastian Hidalgo Vargas
 //main
-#include "../HeaderFiles/SortingAlgos.h"
-#include "../HeaderFiles/cmdline.h"
-#include "../HeaderFiles/FileManager.h"
+#include "SortingAlgos.h"
+#include "cmdline.h"
+#include "FileManager.h"
 
 int main(int argc, char* argvc[]){
 
@@ -30,7 +30,7 @@ int main(int argc, char* argvc[]){
     }else if(algorithm=="IS"){
         SortingAlgos::insertionSort(&pagedArray,(int)(len));
     }
-    pagedArray.wrapUp(P.get<std::string>("output"));
+    pagedArray.wrapUp(P.get<std::string>("Output"));
      //int s[]={25,12,1,45,28,6,3,8,4,9,10,69,420,287,5};
     //int n=sizeof(s)/sizeof(s[0]);
     //quickSort(s,0,n-1);
